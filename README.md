@@ -9,7 +9,7 @@ it is possible to take an algorithmic approach to the design of hardware.
 ## Building and running
 Install docker by visiting docs.docker.com
 
-Copy dockerfile and launch file to a directory On that directory open a terminal and build docker
+Copy dockerfile and launch file to a directory. On that directory open a terminal and build docker
 
 ```docker build -t ahir_dev .```
 
