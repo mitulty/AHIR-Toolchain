@@ -14,7 +14,8 @@ RUN add-apt-repository ppa:neovim-ppa/unstable -y
 RUN apt-get update
 RUN apt-get install -y neovim
 RUN apt install -y python3 \
-    python3-pip
+    python3-pip \
+    python-pip
 
 RUN pip3 install --upgrade pynvim
 RUN pip install --upgrade pynvim
