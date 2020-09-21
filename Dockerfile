@@ -17,8 +17,10 @@ RUN apt install -y python3 \
     python3-pip \
     python-pip
 
-RUN pip3 install --upgrade pynvim
-RUN pip install --upgrade pynvim
+#RUN apt-get install -y python3-neovim
+RUN apt-get -y install python-dev python-pip python3-dev python3-pip
+RUN python -m pip install --upgrade pynvim
+RUN python3 -m pip install --upgrade pynvim
 RUN apt install -y exuberant-ctags
 
 RUN apt install -y pylint
