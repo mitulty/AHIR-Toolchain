@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:18.04
 
 # installing development tools 
 
@@ -26,4 +26,12 @@ RUN apt install -y exuberant-ctags
 RUN apt install -y pylint
 # 
 # RUN span install node --channel=12/stable --classic
-
+#Installing GHDL
+RUN git clone "https://github.com/ghdl/ghdl.git" ghdl
+RUN cd ghdl
+RUN mkdir build
+RUN cd build
+RUN  ../configure --with-llvm-config --prefix=/usr/local
+RUN make
+RUN make install
+#AHIR Packages
