@@ -23,7 +23,7 @@ RUN python -m pip install --upgrade pynvim
 RUN python3 -m pip install --upgrade pynvim
 RUN apt install -y exuberant-ctags
 RUN apt install -y autoconf
-#RUN apt install -y pylint
+
 #Installing GHDL
 RUN git clone "https://github.com/ghdl/ghdl.git" ghdl
 RUN apt install -y gnat-gps
@@ -41,4 +41,7 @@ ENV AHIR_INC="/opt/tools/include"
 ENV PATH="/opt/tools/clang_llvm/bin:$PATH"
 ENV LD_LIBRARY_PATH="/opt/tools/clang_llvm/lib:$LD_LIBRARY_PATH"
 RUN apt-get install -y g++-multilib
-RUN apt-get install -y gcc-multilib 	
+RUN apt-get install -y gcc-multilib 
+RUN apt-get purge -y llvm
+RUN apt autoremove -y
+#RUN apt install -y pylint
