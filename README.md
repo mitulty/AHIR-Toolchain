@@ -13,6 +13,6 @@ Copy dockerfile and launch file to a directory. On that directory open a termina
 
 ```docker build -t ahir_dev .```
 
-Launch the container using ```./launch.sh```
+Launch the container using ```sudo ./launch.sh```
 
 Launch file binds the container file system to host file system using bind command and etc/passed file. All the users of the host system will be available in container as well Use command su - <username> in the containers terminal before creating files so that the files will be created in users home directory in the host system
