@@ -44,4 +44,4 @@ RUN apt-get install -y g++-multilib
 RUN apt-get install -y gcc-multilib 
 RUN apt-get purge -y llvm
 RUN apt autoremove -y
-#RUN apt install -y pylint
+RUN pip3 install -U pylint
