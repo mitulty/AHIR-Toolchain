@@ -11,7 +11,7 @@ Install docker by visiting docs.docker.com
 
 Copy dockerfile and launch file to a directory. On that directory open a terminal and build docker
 
-```docker build -t ahir_dev .```
+```sudo docker build -t ahir_dev .```
 
 Launch the container using ```sudo ./launch.sh```
 
